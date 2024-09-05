@@ -2,8 +2,7 @@ from openai import OpenAI
 import time
 import streamlit as st
 
-# OpenAI API 키 설정
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+
 
 # 제목
 st.title('당신에 필요한 휴식은? 😌')
@@ -12,6 +11,8 @@ st.title('당신에 필요한 휴식은? 😌')
 work_description = st.text_area("평소에 무슨 일을 해요?")
 books_per_year = st.number_input("1년에 책은 몇 권 읽어요?", min_value=0, step=1)
 computer_usage = st.slider("하루에 몇 시간 정도 컴퓨터를 사용해요?", min_value=0, max_value=24, step=1)
+
+client = OpenAI(api_key=st.secrets["API_KEY"])
 
 if st.button('결과 보기 🚀'):
     st.write('결과를 기다려주세요...')
