@@ -13,7 +13,7 @@ books_per_year = st.number_input("1년에 책은 몇 권 읽어요?", min_value=
 computer_usage = st.slider("하루에 몇 시간 정도 컴퓨터를 사용해요?", min_value=0, max_value=24, step=1)
 
 # OpenAI API 클라이언트 초기화
-api_key = st.secrets["general"]["api_key"]
+api_key = st.secrets["api_key"]
 client = OpenAI(api_key=api_key)
 
 if st.button('결과 보기 🚀'):
