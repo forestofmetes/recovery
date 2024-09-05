@@ -1,6 +1,5 @@
-pip install openai
-
-import openai
+from openai import OpenAI
+import time
 import streamlit as st
 
 # OpenAI API 키 설정
